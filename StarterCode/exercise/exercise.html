@@ -14,25 +14,25 @@
     </div>
 
     <div class="grid-container">
-        <div id="monIcon" class="grid-item-1">
+        <div id="monIcon" class="grid-item-1 week">
             <h6>Mon</h6>
         </div>
-        <div id="tuesIcon" class="grid-item-2">
+        <div id="tuesIcon" class="grid-item-2 week">
             <h6>Tues</h6>
         </div>
-        <div id="wedIcon" class="grid-item-3">
+        <div id="wedIcon" class="grid-item-3 week">
             <h6>Wed</h6>
         </div>
-        <div id="thursIcon" class="grid-item-4">
+        <div id="thursIcon" class="grid-item-4 week">
             <h6>Thurs</h6>
         </div>
-        <div id="friIcon" class="grid-item-5">
+        <div id="friIcon" class="grid-item-5 week">
             <h6>Fri</h6>
         </div>
-        <div id="satIcon" class="grid-item-6">
+        <div id="satIcon" class="grid-item-6 week">
             <h6>Sat</h6>
         </div>
-        <div id="sunIcon" class="grid-item-7">
+        <div id="sunIcon" class="grid-item-7 week">
             <h6>Sun</h6>
         </div>
         <div id="" class="grid-item-8">
@@ -49,20 +49,21 @@
                 </select>
 
             </table>
-            <input style="margin-top: 62px;" type="submit" value="GO" id="button" onclick="display();disableButton();">
+            <input style="margin-top: 25px; margin-bottom: 37px; background-color: #3eb9d8;" type="submit" value="GO" id="button" onclick="display();disableButton();">
         </div>
         <div class="grid-item-9">
             <h4>Goals</h4>
             <form></form>
             <span id="theCheckBox"></span>
             <span id="goals"></span>
-            <input type="submit" value="Submit" onclick="checkboxTrue(getDropdownValue());">
+            <input type="submit" value="Submit" onclick="checkboxTrue(getDropdownValue());enableButton(); hide();" style="background-color:#3eb9d8;">
 
         </div>
     </div>
 
     <script src="exercise.js"></script>
 
+    <a href = "D:\StarterCode\home\template2.html"> <button class = "backButton" href = "quiz.html"> Back to home page </button> </a>
   </div>
 </body>
 </html>

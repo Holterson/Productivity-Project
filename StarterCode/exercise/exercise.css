@@ -3,10 +3,19 @@ body {
     margin: 0px;
     top: 40%;
     height: 80%;
+    background-image: radial-gradient(#e5f4ff, #1f217a);
 }
 
 .main {
-height: 80%;
+  background-image: linear-gradient(#dfdbff, #d3ffe6, #ddfff6, #d3f4ff, #cceeff, #dfdbff);
+  width: 75%;
+  min-height: 80%;
+  margin: auto;
+  margin-top: 177px;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 80px;
 }
 
 .backButton {
@@ -17,6 +26,7 @@ left: 19%;
 right:24%;
 width: 60%;
 height: 4%;
+background-color: #3eb9d8;
 }
 
 
@@ -28,7 +38,7 @@ height: 4%;
     padding: 10px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    background-color: #ffdddd;
+
 }
 .grid-container > div  {
     padding: 0px;
@@ -36,7 +46,7 @@ height: 4%;
     text-align: center;
     margin: 0px;
     border: 1px solid black;
-    color: #f73149;
+
 }
 .grid-item-8 {
     grid-area: 2 / 1 / 2 / 4;
@@ -50,12 +60,17 @@ height: 4%;
     padding: 0;
 }
 
+.week{
+  background-color:#e2e0ff;
+}
 /*-----------Form Styling-----------------------*/
 input, select {
 width: auto;
 padding: 12px 20px;
 margin: 8px 0;
-display: inline-block;
+display:inline-block;
+margin-top: 23px;
+background-color: #91e8ff;
 }
 
 input[type=text] {
@@ -68,13 +83,12 @@ margin: 8px 0;
 .topHead {
 height: auto;
 overflow: hidden;
-border: 1px solid black;
-background-color: #e8c2c2;
-color: #f73149;
+color: #350e66;
+text-align: center;
 }
 
 h4 {
 width: 100%;
 margin: 0;
-color:#f73149;
+color:#350e66;
 }

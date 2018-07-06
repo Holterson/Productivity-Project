@@ -36,7 +36,6 @@ function getDropdownValue(){
   var days = document.getElementById("days").value;
   return days;
 }
-
 //Activity 4 - Testing is an important part of coding and we want to test and confirm that if the user
 //selects a day in the dropdown that the right value is returned or that a value is returned at all.
 //Write a function called testDays.  Inside the function, call getDropdownValue
@@ -65,7 +64,7 @@ function createCheckBox(dayGoal){
   var newCheckBox = document.createElement("INPUT");
 
 //Activity 7.2 - Create a variable called newLabel and create a LABEL element.
-  var newLabel = document.createElement("LABEL");
+  var newLabel = document.createElement("label");
 
 //Activity 7.3 - Create a variable called newBreak and create a br(break) element.
   var newBreak = document.createElement('br');
@@ -94,9 +93,8 @@ function createCheckBox(dayGoal){
 //Activity 12.1 - Create a variable called element and set it equal to document.getElementById("goals");
   var element = document.getElementById("goals");
 
-//Activity 12.2 - Append newLabel element
+//Activity 12.2 - Append newLabel to element
   element.appendChild(newLabel);
-  //newLabel.appendChild(element);
 }
 
 /********************** Part 3 **********************/
@@ -159,9 +157,10 @@ function goalsForTheDay(selectedDay){
 //If any of the checkboxes are not checked then the box for that specific day will turn red.
 function checkboxTrue(selectedDay){
 //These variables gets the element with the specified ID in this case it will get the checkboxes.
-  var checkbox1 = document.getElementById(checkboxId[0]);
-  var checkbox2 = document.getElementById(checkboxId[1]);
-  var checkbox3 = document.getElementById(checkboxId[2]);
+
+//  var checkbox1 = document.getElementById(checkboxId[0]);
+//  var checkbox2 = document.getElementById(checkboxId[1]);
+//  var checkbox3 = document.getElementById(checkboxId[2]);
 
 //Activity 15.1 - Create a variable called monday and get the element with the ID 'monIcon'
   var monday = document.getElementById("monIcon");
@@ -185,7 +184,11 @@ function checkboxTrue(selectedDay){
   var sunday = document.getElementById("sunIcon");
 
 //This if statements checks if all of the checkboxes are checked
-    if(checkbox1.checked === true && checkbox2.checked === true && checkbox3.checked === true){
+for(i = 0; i<checkboxId.length; i++){
+  var chckbx = document.getElementById(checkboxId[i]);
+
+
+    if(chckbx.checked ===true){
       //If all the checkboxes are ticked then the background color of the box
       //for that day in the HTML DOM should change to green.
       if(selectedDay === 'monday'){
@@ -258,7 +261,7 @@ function checkboxTrue(selectedDay){
     }
 
 }
-
+}
 //Activity 17.1 (OPTIONAL) - Create a function called disableButton that disables the 'GO' button in the HTML DOM after the user clicks it
 //Call the function in the onclick attribute in the exercise.html file.
 //Start your code here.
@@ -276,6 +279,18 @@ function display(){
   goalsForTheDay(selected);
 }
 
+
+function enableButton(){
+  document.getElementById("button").disabled = false;
+
+}
+
+function hide(){
+  var l = document.getElementsByTagName('label');
+  for (var i = 0; i < l.length; i++) {
+    document.getElementsByTagName('label')[i].style.display = 'none';
+  }
+}
 /********************** Part 5 **********************/
 //Activity 18 - If you've made it to this activity that means your JavaScript is working perfectly.
 //For this activity you are going to use your creativity to style the webpage using CSS.
